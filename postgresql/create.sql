@@ -1,14 +1,24 @@
-DROP DATABASE jiadtest;
-CREATE DATABASE jiadtest;
-
+-- DROP DATABASE jiadtest;
+-- CREATE DATABASE jiadtest;
+-- ALTER SEQUENCE tablename_id_seq RESTART WITH 0;
 DROP TABLE human;
+--CREATE TABLE human(
+--  id BIGSERIAL NOT NULL PRIMARY KEY,
+--  name VARCHAR(255) NOT NULL,
+--  date_of_birth TIMESTAMP NOT NULL,
+--  country VARCHAR(255) NOT NULL,
+ -- email VARCHAR(255) UNIQUE,
+--  car_id BIGINT REFERENCES car (id), UNIQUE(car_id)
+--);
 CREATE TABLE human(
-  human_id BIGSERIAL NOT NULL PRIMARY KEY,
+  id uuid NOT NULL PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   date_of_birth TIMESTAMP NOT NULL,
   country VARCHAR(255) NOT NULL,
-  email VARCHAR(255)
+  email VARCHAR(255) UNIQUE,
+  car_id BIGINT REFERENCES car (id), UNIQUE(car_id)
 );
+
 
 INSERT INTO human (
   name, date_of_birth, email, country
