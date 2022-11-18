@@ -5,7 +5,7 @@ create table car (
 	price MONEY NOT NULL
 );
 
-INSERT INTO Car (make, model, price) VALUES ('Scion', 'tC', '$88314.40');
+insert into Car (make, model, price) values ('Scion', 'tC', '$88314.40');
 INSERT INTO Car (make, model, price) VALUES ('Mercury', 'Cougar', '$89777.19');
 INSERT INTO Car (make, model, price) VALUES ('Oldsmobile', 'Cutlass Cruiser', '$94242.77');
 INSERT INTO Car (make, model, price) VALUES ('Hyundai', 'Veracruz', '$57429.78');
